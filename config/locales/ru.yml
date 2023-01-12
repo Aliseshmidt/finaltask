@@ -1,0 +1,72 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   "true": "foo"
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+ru:
+  hello: "Привет мир!"
+  
+  builds: "Билды"
+  create_build: "Создать билд"
+  name_build: "Название"
+  body_build: "Содержание"
+  su_build: "Зарегистрируйтесь, чтобы создать билд"
+
+  comments: "Комментарии"
+  del_comment: "Вы уверены?"
+  su_comment: "Зарегистрируйтесь, чтобы оставить комментарий"
+  add_comment: "Добавить комментарий"
+  user_name: "Никнейм"
+  body_comment: "Комментарий"
+
+  profiles: "Профили пользователей"
+  info_profile: "О себе"
+  rang_profile: "Ранг"
+  fav_hero: "Любимый герой"
+  edit_profile: "Редактировать профиль"
+  
+  heroes: "Герои"
+  title_post: "Имя героя"
+  body_post: "Описание"
+  image_post: "Изображение"
+  edit_post: "Редактировать пост"
+  add_post: "Добавить пост о герое"
+
+  create_post: "Создать пост"
+  log_profile: "Профили"
+  create_profile: "Создать профиль"
+  sign_up: "Зарегистрироваться"
+  log_in: "Войти"
+  log_out: "Выйти"
+
+  email: "Ваша почта"
+  password: "Ваш пароль"
+  name: "Ваше имя"
+
+  message: "MSG"

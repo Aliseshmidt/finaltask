@@ -1,0 +1,7 @@
+<div class="container">
+    <% @users.each do |user|%>
+    <div class="card card-body bg-light">
+        <h3 style="color:black"><%=link_to "#{user.name}", user_path(user) %></h3>
+    </div><br>
+    <%end%>
+</div>

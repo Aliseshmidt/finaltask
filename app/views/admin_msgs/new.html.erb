@@ -1,0 +1,10 @@
+<h1>Add message</h1>
+<%= form_for :msg, url: admin_msgs_path, data: { turbo: false }  do |f| %>
+    <p>
+        <%= f.label 'Message' %><br>
+        <%= f.text_area :body %>
+    </p>
+    <p>
+        <%= f.submit({:class => 'btn btn-primary'}) %>
+    </p>
+<% end %>

@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="title"><%= t(:sign_up) %></h2><br>
+
+    <div class="mt">
+        <%= form_with model: @user do |form| %>
+            <p><%= form.label :name, t(:name) %></p>
+            <p><%= form.text_field :name, class: 'form-text-field' %></p><br>
+
+            <p class="mt"><%= form.label :email, t(:email) %></p>
+            <p><%= form.text_field :email, class: 'form-text-field' %></p><br>
+
+            <p class="mt"><%= form.label :password, t(:password) %></p>
+            <p><%= form.password_field :password, class: 'form-text-field' %></p><br>
+
+            <p class="mt-lg"><%= form.submit t(:sign_up), class: 'btn btn-sm btn-outline-secondary' %> <%= link_to t(:log_in), new_session_path, :class => 'btn btn-sm btn-outline-secondary'%></p>
+        <% end %>
+    </div>
+</div>
+

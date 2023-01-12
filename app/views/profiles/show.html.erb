@@ -1,0 +1,14 @@
+<div class="card card-body bg-light">
+    <h1><%= @profile.name %></h1><br><br>
+    <p><strong><%= t(:info_profile)%></strong></p>
+    <p><%= @profile.info %></p>
+    <p><strong><%= t(:rang_profile)%></strong></p>
+    <p><%= @profile.rang %></p>
+    <p><strong><%= t(:fav_hero) %></strong></p>
+    <p><%= link_to Post.find_by_id(@profile.post_id).title, post_path(Post.find_by_id(@profile.post_id)), :class => 'btn btn-sm btn-outline-secondary' %></p>
+    <% if current_user.present? %>
+        <% if @profile.user_id == current_user.id %>
+            <%= link_to t(:edit_profile), edit_profile_path(@profile), :class => 'btn btn-sm btn-outline-secondary'%>
+        <% end %>
+    <% end %>
+</div>

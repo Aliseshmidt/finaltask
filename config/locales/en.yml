@@ -31,3 +31,42 @@
 
 en:
   hello: "Hello world"
+
+  builds: "Builds"
+  create_build: "Create Build"
+  name_build: "Title"
+  body_build: "Body"
+  su_build: "Sign Up to create builds"
+
+  comments: "Comments"
+  del_comment: "Are you sure?"
+  su_comment: "Sign Up to put comments"
+  add_comment: "Add comment"
+  user_name: "Username"
+  body_comment: "Body"
+
+  profiles: "Users Profiles"
+  info_profile: "Info"
+  rang_profile: "Rang"
+  fav_hero: "Favourite Hero"
+  edit_profile: "Edit Profile"
+
+  heroes: "Heroes"
+  title_post: "Title"
+  body_post: "Body"
+  image_post: "Image"
+  edit_post: "Edit post"
+  add_post: "Add post about Hero"
+
+  create_post: "Create Post"
+  log_profile: "Profiles"
+  create_profile: "Create Profile"
+  sign_up: "Sign Up"
+  log_in: "Log In"
+  log_out: "Log out"
+
+  email: "Your email"
+  password: "Your password"
+  name: "Your name"
+
+  message: "MSG"

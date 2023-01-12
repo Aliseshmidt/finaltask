@@ -1,0 +1,5 @@
+<div class="card card-body bg-light">
+    <h1><%= @user.name %></h1><br><br>
+    <p><%= @user.info %></p>
+    <%= link_to "Edit", edit_user_path(@user), :class => 'btn btn-sm btn-outline-secondary'%>
+</div>

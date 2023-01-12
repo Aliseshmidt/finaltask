@@ -1,0 +1,16 @@
+<div class="container">
+    <h2 class="title"><%= t(:log_in) %></h2>
+    <br>
+    <div class="mt">
+        <%= form_with scope: :session, url: session_path, data: {turbo: false} do |form| %>
+            <p class="mt"><%= form.label :email, t(:email) %></p>
+            <p><%= form.text_field :email, class: 'form-text-field' %></p><br>
+
+
+            <p class="mt"><%= form.label :pasword, t(:password) %></p>
+            <p><%= form.password_field :password, class: 'form-text-field' %></p><br>
+            
+            <p class="mt-lg"><%= form.submit t(:log_in), :class => 'btn btn-sm btn-outline-secondary' %> <%= link_to t(:sign_up), new_user_path, :class => 'btn btn-sm btn-outline-secondary'%></p>
+        <% end %>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<h1>Edit profile</h1>
+<%= form_for :profile, url: profiles_path, data: { turbo: false }  do |f| %>
+    <% if @profile.errors.any? %>
+        <% @profile.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%= msg %></div>
+        <% end %>
+    <% end %>
+    <p>
+        <%= f.label t(:info_profile) %><br>
+        <%= f.text_area :info %>
+    </p>
+    <p>
+        <%= f.label t(:rang_profile) %><br>
+        <%= f.text_field :rang %>
+    </p>
+    <p>
+        <%= f.select(:post_id, Post.all.map{ |post| [post.title, post.id]})%>
+    </p>
+    <p>
+        <%= f.submit({:class => 'btn btn-primary'}) %>
+    </p>
+<% end %>

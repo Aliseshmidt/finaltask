@@ -1,0 +1,20 @@
+<h1><%= t(:comments) %></h1>
+    <br>
+    <% @post.comments.each do |comment|%>
+    <div class="card card-body bg-light">
+    <p style="color:black"><strong ><%= comment.username %></strong>: 
+    <%= comment.body%></p> 
+    </div>
+    <% if current_user.present? %>
+        <% if current_user.name == comment.username %>
+            <%= button_to '[X]', [comment.post, comment],
+                                method: :delete,
+                                data: {turbo_confirm: t(:del_comment)}%></p>
+        <% end %>
+    <% end %>    
+<% end %>
+<% unless current_user.present? %>
+    <br>
+    <p><%= link_to t(:su_comment), new_session_path, :class => 'btn btn-sm btn-outline-secondary'%></p>
+    <br>
+<% end %>

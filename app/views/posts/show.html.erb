@@ -1,0 +1,23 @@
+<div class="card card-body bg-light">
+<h1><%= @post.title%></h1><br>
+<p><%= @post.body%><p>
+<div style="width:400px; height:auto"><p><%= image_tag(@post.image, style:'width:100%')%><p></div>
+</div>
+<% if current_user.present? %>
+    <% if current_user.name == 'admin' %>  
+    <hr>
+        <%= link_to "Edit", edit_post_path(@post), :class => 'btn btn-sm btn-outline-secondary'%>
+        <%= button_to "Delete", post_path(@post),
+                        method: :delete,
+                        data: {turbo_confirm: "Are you sure?"},
+                        :class => 'btn btn-danger'%>
+    <hr>
+    <% end %>
+<% end %>
+
+<br>
+<%= render 'comments/comments'%>
+<%= render 'comments/form'%>
+<%= render 'builds/builds'%>
+<%= render 'builds/form'%>
+

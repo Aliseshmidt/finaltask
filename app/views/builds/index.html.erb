@@ -1,0 +1,57 @@
+<h1><%= t(:builds) %></h1>
+<% @builds.each do |build|%>
+    <div class="card card-body bg-light">
+        <h1 style="color:black"><%= build.title %></h1>
+        <% build.builds.to_ary.each do |b|%>
+        <h3 style="color:black"><%= b.name %></h3>
+        <p><%= b.body %></p>
+        <% if b.images.present? %>
+        <h3><strong>Закуп после 30 мин:</strong></h3>
+            <div class="cont">
+            <div class="col">
+                <div>
+                <% (0...b.images.count).each do |image| %>
+                    <%= image_tag(b.images[image]) %>
+                    <% break %>
+                <% end %>
+                </div>
+                <div>
+                <% (1...b.images.count).each do |image| %>
+                    <%= image_tag(b.images[image]) %>
+                    <% break %>
+                <% end %>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                <% (2...b.images.count).each do |image| %>
+                    <%= image_tag(b.images[image]) %>
+                    <% break %>
+                <% end %>
+                </div>
+                <div>
+                <% (3...b.images.count).each do |image| %>
+                    <%= image_tag(b.images[image]) %>
+                    <% break %>
+                <% end %>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                <% (4...b.images.count).each do |image| %>
+                    <%= image_tag(b.images[image]) %>
+                    <% break %>
+                <% end %>
+                </div>
+                <div>
+                <% (5...b.images.count).each do |image| %>
+                    <%= image_tag(b.images[image]) %>
+                    <% break %>
+                <% end %>
+                </div>
+            </div>
+            </div>
+        <% end %>
+    <% end %>
+    </div>
+<%end%>

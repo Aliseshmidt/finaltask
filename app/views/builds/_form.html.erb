@@ -1,0 +1,29 @@
+<% if current_user.present? %>
+    <h3><%= t(:create_build)%></h3>
+    <%= form_for([@post, @post.builds.build], data: {turbo: false}) do |f| %>
+    <% if @post.errors.any? %>
+        <% @post.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%= msg %></div>
+        <% end %>
+    <% end %>
+        <p>
+            <%= f.label t(:name_build) %><br>
+            <%= f.text_field :name %>
+        </p>
+        <p>
+            <%= f.label t(:body_build) %><br>
+            <%= f.text_area :body %>
+        </p>
+        <p>
+            <%= f.label :images %>
+            <%= f.file_field :images, multiple: true %>
+        </p>
+        <p>
+            <%= f.submit({:class => 'btn btn-sm btn-outline-secondary'}) %>
+        </p>
+    <% end %>
+<% else %>
+    <br>
+    <p><%= link_to t(:su_build), new_session_path, :class => 'btn btn-sm btn-outline-secondary'%></p>
+    <br>
+<% end %>
